@@ -6,15 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class App extends Component
+class Navbar extends Component
 {
-
-    public $styles = null; // Ini kita panggil di bagian app.blade
-
-    public $title;
-    public function __construct($title = null)
+    /**
+     * Create a new component instance.
+     */
+    public function __construct()
     {
-        $this->title = $title ? $title : 'Portfolio'; // Ternary
+        //
     }
 
     /**
@@ -22,6 +21,6 @@ class App extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.app');
+        return view('layouts.navbar');
     }
 }

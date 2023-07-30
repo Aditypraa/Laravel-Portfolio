@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 
 Route::get('/auth', [AuthController::class, 'index'])->name('login')->middleware('guest');
 // Redirect To AKUN GOOGLE
@@ -31,5 +32,10 @@ Route::prefix('dashboard')->middleware('auth')->group(
         });
         Route::get('/', [DashboardController::class, 'index']);
         Route::resource('halaman', DashboardController::class);
+
+        //EXPERIENCE
+        Route::resource('experience', ExperienceController::class);
+        //Education
+        Route::resource('education', EducationController::class);
     }
 );

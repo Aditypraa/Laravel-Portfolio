@@ -19,7 +19,7 @@ class DashboardController extends Controller
 
     public function create()
     {
-        return view('dashboard.create');
+        return view('dashboard.create-dashboard');
     }
 
 
@@ -29,6 +29,8 @@ class DashboardController extends Controller
         Session::flash('title', $request->title);
         Session::flash('content', $request->content);
         // End Session
+
+        // Validasi
         $request->validate(
             [
                 'title' => 'required',
@@ -61,9 +63,9 @@ class DashboardController extends Controller
 
     public function edit(string $id)
     {
-        // Menampilkan Data
+        // Menampilkan Data berdasarkan id
         $data = Dashboard::where('id', $id)->first();
-        return view('dashboard.edit')->with('data', $data);
+        return view('dashboard.edit-dashboard')->with('data', $data);
     }
 
     public function update(Request $request, string $id)
