@@ -37,6 +37,7 @@
     <!-- page-body-wrapper ends -->
 
     @include('layouts._script')
+    {{ $script }}
 
 </body>
 

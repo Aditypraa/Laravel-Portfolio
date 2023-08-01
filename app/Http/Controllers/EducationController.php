@@ -51,6 +51,8 @@ class EducationController extends Controller
                 'info1' => 'required',
                 'tanggal_mulai' => 'required',
             ],
+
+            // Menampilkan Pesan Jika Tidak diisi
             [
                 'title.required' => 'Masukan Nama Universitas',
                 'info1.required' => 'Masukan Gelar',
@@ -103,6 +105,8 @@ class EducationController extends Controller
                 'info1' => 'required',
                 'tanggal_mulai' => 'required',
             ],
+
+            // Untuk Menampilkan Pesan Jika Tidak Diisi
             [
                 'title.required' => 'Judul Wajib Diisi',
                 'info1.required' => 'Nama Perusahaan Wajib Diisi',

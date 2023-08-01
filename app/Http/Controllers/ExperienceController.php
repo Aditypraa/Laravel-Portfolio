@@ -104,6 +104,8 @@ class ExperienceController extends Controller
                 'tanggal_mulai' => 'required',
                 'content' => 'required'
             ],
+
+            // Menampilkan Pesan Jika tidak diisi
             [
                 'title.required' => 'Judul Wajib Diisi',
                 'info1.required' => 'Nama Perusahaan Wajib Diisi',

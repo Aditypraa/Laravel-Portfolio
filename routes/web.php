@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\SkillController;
 
 Route::get('/auth', [AuthController::class, 'index'])->name('login')->middleware('guest');
 // Redirect To AKUN GOOGLE
@@ -37,5 +38,9 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::resource('experience', ExperienceController::class);
         //Education
         Route::resource('education', EducationController::class);
+
+        // Skill
+        Route::get('skill', [SkillController::class, 'index'])->name('skill.index');
+        Route::post('skill', [SkillController::class, 'update'])->name('skill.update');
     }
 );

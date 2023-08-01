@@ -36,6 +36,8 @@ class DashboardController extends Controller
                 'title' => 'required',
                 'content' => 'required'
             ],
+
+            // Untuk Menampilkan Pesan Jika Tidak Diisi
             [
                 'title.required' => 'Judul Wajib Diisi',
                 'content.required' => 'Content Wajib Diisi'
@@ -77,6 +79,8 @@ class DashboardController extends Controller
                 'title' => 'required',
                 'content' => 'required'
             ],
+
+            // Untuk Menampilkan Pesan Jika Tidak Diisi
             [
                 'title.required' => 'Judul Wajib Diisi',
                 'content.required' => 'Content Wajib Diisi'
