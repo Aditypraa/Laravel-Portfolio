@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SettingDashboardController;
 use App\Http\Controllers\SkillController;
 
 Route::get('/auth', [AuthController::class, 'index'])->name('login')->middleware('guest');
@@ -36,11 +38,20 @@ Route::prefix('dashboard')->middleware('auth')->group(
 
         //EXPERIENCE
         Route::resource('experience', ExperienceController::class);
+
         //Education
         Route::resource('education', EducationController::class);
 
         // Skill
         Route::get('skill', [SkillController::class, 'index'])->name('skill.index');
         Route::post('skill', [SkillController::class, 'update'])->name('skill.update');
+
+        // Profile
+        Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
+        Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
+
+        // Setting Dashboard
+        Route::get('settingDashboard', [SettingDashboardController::class, 'index'])->name('settingDashboard.index');
+        Route::post('settingDashboard', [SettingDashboardController::class, 'update'])->name('settingDashboard.update');
     }
 );

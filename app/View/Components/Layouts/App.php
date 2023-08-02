@@ -10,6 +10,7 @@ class App extends Component
 {
 
     public $styles = null; // Ini kita panggil di bagian app.blade
+    public $script = null;
 
     public $title;
     public function __construct($title = null)
