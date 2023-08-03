@@ -15,7 +15,7 @@ class SkillController extends Controller
         $skill = array_column($skill_data, 'name');
         $skill = "'" . implode("','", $skill) . "'";
 
-        return view('skill.index')->with(['skill' => $skill]);
+        return view('behind.skill.index')->with(['skill' => $skill]);
     }
 
     public function update(Request $request)

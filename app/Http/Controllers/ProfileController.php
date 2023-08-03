@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     function index()
     {
-        return view('profile.index');
+        return view('behind.profile.index');
     }
 
     function update(Request $request)

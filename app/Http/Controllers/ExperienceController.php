@@ -22,13 +22,13 @@ class ExperienceController extends Controller
         // Misalkan menampilkan di halaman experience maka seperti ini : 'tipe','experience'
         // Jika Menampilkan di halaman education maka seperti ini : 'tipe','education'
         $data = History::where('tipe', 'experience')->orderBy('tanggal_akhir', 'desc')->get();
-        return view('experience.index')->with('data', $data);
+        return view('behind.experience.index')->with('data', $data);
     }
 
 
     public function create()
     {
-        return view('experience.create-experience');
+        return view('behind.experience.create-experience');
     }
 
 
@@ -90,7 +90,7 @@ class ExperienceController extends Controller
     {
         // Menampilkan Data berdasatkan tabel id dan tabel tipe dengan enum experience sesuai construktur di atas
         $data = History::where('id', $id)->where('tipe', $this->tipe)->first();
-        return view('experience.edit-experience')->with('data', $data);
+        return view('behind.experience.edit-experience')->with('data', $data);
     }
 
 

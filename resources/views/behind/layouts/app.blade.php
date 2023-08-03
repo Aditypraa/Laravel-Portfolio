@@ -9,7 +9,7 @@
 
     {{ $styles }}
 
-    @include('layouts._styles')
+    @include('behind.layouts._styles')
 
 </head>
 
@@ -21,14 +21,14 @@
         <x-layouts.navbar></x-layouts.navbar>
 
 
-        @include('layouts._sidebar')
+        @include('behind.layouts._sidebar')
 
         <!-- partial -->
         <div class="main-panel">
 
-            @include('layouts.content')
+            @include('behind.layouts.content')
 
-            @include('layouts.footer')
+            @include('behind.layouts.footer')
 
         </div>
         <!-- main-panel ends -->
@@ -36,7 +36,7 @@
     </div>
     <!-- page-body-wrapper ends -->
 
-    @include('layouts._script')
+    @include('behind.layouts._script')
     {{ $script }}
 
 </body>

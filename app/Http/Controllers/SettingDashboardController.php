@@ -11,7 +11,7 @@ class SettingDashboardController extends Controller
     function index()
     {
         $dataDashboard = Dashboard::orderBy('title', 'asc')->get();
-        return view('settingDashboard.index')->with('dataDashboard', $dataDashboard);
+        return view('behind.settingDashboard.index')->with('dataDashboard', $dataDashboard);
     }
 
     function update(Request $request)

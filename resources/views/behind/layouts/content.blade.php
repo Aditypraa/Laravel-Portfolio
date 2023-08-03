@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 
-    @include('layouts._handle-error')
+    @include('behind.layouts._handle-error')
 
     <div class="row">
         <div class="col-md-12 stretch-card">

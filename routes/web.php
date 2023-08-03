@@ -5,9 +5,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingDashboardController;
 use App\Http\Controllers\SkillController;
+
+
+Route::get('/', [FrontController::class, 'index']);
+
 
 Route::get('/auth', [AuthController::class, 'index'])->name('login')->middleware('guest');
 // Redirect To AKUN GOOGLE

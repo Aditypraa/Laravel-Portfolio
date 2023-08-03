@@ -13,13 +13,13 @@ class DashboardController extends Controller
     {
         // Menampilkan Data di halaman Dashboard
         $data = Dashboard::orderby('title', 'asc')->get();
-        return view('dashboard.index')->with('data', $data);
+        return view('behind.dashboard.index')->with('data', $data);
     }
 
 
     public function create()
     {
-        return view('dashboard.create-dashboard');
+        return view('behind.dashboard.create-dashboard');
     }
 
 
@@ -67,7 +67,7 @@ class DashboardController extends Controller
     {
         // Menampilkan Data berdasarkan id
         $data = Dashboard::where('id', $id)->first();
-        return view('dashboard.edit-dashboard')->with('data', $data);
+        return view('behind.dashboard.edit-dashboard')->with('data', $data);
     }
 
     public function update(Request $request, string $id)
